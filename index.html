@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit Harapan Bunda</title>
+
+    <style>
+        /* BODY */
+        body {
+            margin: 0;
+            background: #eef4fa;
+            font-family: "Poppins", Arial, sans-serif;
+            color: #123;
+            letter-spacing: 0.2px;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0b7a75, #0a6b67);
+            color: #fff;
+            padding: 16px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .brand img {
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .brand h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.25s;
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+        }
+
+        /* SECTION */
+        .section {
+            display: none;
+            max-width: 1050px;
+            margin: auto;
+            padding: 50px 30px;
+            animation: fade 0.5s ease;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CARD */
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* IMG */
+        .card img {
+            margin-bottom: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        /* TABLE */
+        table {
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        table th {
+            background: #0b7a75;
+            color: #fff;
+            padding: 12px;
+        }
+
+        table td {
+            background: #f9fbfc;
+            padding: 10px;
+        }
+
+        table tr:nth-child(even) td {
+            background: #eef3f6;
+        }
+
+        /* FORM INPUT */
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 14px;
+            border: 1px solid #cfd8e3;
+            border-radius: 10px;
+            background: #fafcff;
+            transition: 0.25s;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #0b7a75;
+            box-shadow: 0 0 6px rgba(11, 122, 117, 0.3);
+        }
+
+        /* BUTTON */
+        button {
+            padding: 13px;
+            background: #0b7a75;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.25s;
+        }
+
+        button:hover {
+            background: #0a6460;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 18px;
+            background: #dff3f1;
+            margin-top: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #0b7a75;
+            letter-spacing: 0.3px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="logo.jpg" width="50" height="60" title="foto">
+            <div>
+                <h3 style="margin:0">Rumah Sakit Harapan Bunda</h3>
+                <small>Pelayanan Kesehatan Terpercaya</small>
+            </div>
+        </div>
+
+        <nav>
+            <a onClick="showPage('home')" id="nav-home">Home</a>
+            <a onClick="showPage('informasi')" id="nav-informasi">Informasi</a>
+            <a onClick="showPage('sarana')" id="nav-sarana">Sarana & Prasarana</a>
+            <a onClick="showPage('jadwal')" id="nav-jadwal">Jadwal Dokter</a>
+            <a onClick="showPage('pendaftaran')" id="nav-pendaftaran">Pendaftaran</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <div class="section" id="home">
+        <div class="card">
+            <img src="3.jpg" width="50%" style="border-radius:10px">
+            <img src="depan igd.jpg" width="49%" style="border-radius:5px">
+
+            <h1>Selamat Datang di Rumah Sakit Harapan Bunda</h1>
+            <p>Kesehatan Anda adalah prioritas kami. Kami menghadirkan pelayanan kesehatan unggulan dilengkapi dengan
+                teknologi medis modern dan layanan pelayanan terpadu melalui rawat jalan, rawat inap, dan IGD 24 jam
+                dengan
+                mengutamakan keselamatan pasien, keramahan pelayanan, serta kenyamanan selama perawatan.</p>
+        </div>
+    </div>
+
+    <!-- INFORMASI -->
+    <div class="section" id="informasi">
+        <div class="card">
+            <h2>Informasi Layanan Rumah Sakit</h2>
+            <p><b>Jam Pelayanan:</b></p>
+            <ul>
+                <li>Jam Kunjung untuk Menjenguk Pasien :
+                    Pagi : 10.00-12.00 wib (Maks. 2 pengunjung pasien umum dan 1 pengunjung pasien ICU) untuk pada
+                    Sore : 17.00-19.00 wib (Maks. 2 pengunjung pasien umum dan 1 pengunjung pasien ICU).</li>
+                <li>Rawat Jalan: Senin-Sabtu, 08.00-15.00</li>
+                <li>Apotek Buka Setiap Hari: 07.00-17.00</li>
+                <li>Rawat Inap : Kelas VIP, VVIP, Kelas I, II, III
+                    <p><b>Pemberitahuan Kebijakan Kunjungan Pasien</b></p>
+                <li>Pengunjung wajib menggunakan masker dan menjaga kebersihan tangan.</li>
+                <li>Selalu menjaga ketenangan dan tidak membuat keributan di area Rumah Sakit</li>
+                <li>Dilarang membuat kebisingan, mengambil foto/video pasien</li>
+                <li>Anak sehat usia dibawah 12 (duabelas) tahun dilarang masuk ke ruang perawatan</li>
+                <li>Tidak merokok di dalam lingkungan rumah sakit</li>
+
+
+
+            </ul>
+            <p><b>Kontak:</b> 085763221354</p>
+            <p><b>Email:</b> info@dutabangsa.com</p>
+            <p><b>Alamat:</b> Jl. K.H. Samahudin No. 93</p>
+        </div>
+    </div>
+
+    <!-- SARANA -->
+    <div class="section" id="sarana">
+        <div class="card">
+
+            <!-- FOTO SARANA ASLI (TIDAK DIHAPUS) -->
+            <img src="ri.jpg" width="22%">
+            <img src="igd.jpg" width="22%">
+            <img src="op.jpg" width="22%">
+            <img src="icu.jpg" width="22%">
+            <img src="labora.jpg" width="22%">
+            <img src="ruangan.jpg" width="22%">
+            <img src="krkrn.jpg" width="23%">
+            <img src="radiologi.jpg" width="22%">
+
+            <h2>Sarana di Rumah Sakit</h2>
+            <ul>
+                <li>Ruang Operasi yang sudah Standar Internasional</li>
+                <li>Instalasi Gawat Darurat (IGD)</li>
+                <li>ICU / NICU / PICU</li>
+                <li>Poliklinik Rawat Jalan</li>
+                <li>Rawat Inap VVIP, VIP, I, II, III</li>
+                <li>Rehabilitasi medik / fisioterapi</li>
+                <li>Laboratorium Pemeriksaan Darah & Mikrobiologi</li>
+                <li>Radiologi X-ray, USG, CT-Scan</li>
+                <li>IGD buka 24 Jam</li>
+                <li>Apotek Buka Setiap Hari 07.00-17.00</li>
+            </ul>
+            <h2>Prasarana di Rumah Sakit</h2>
+            <ul>
+                <li>Tangga darurat</li>
+                <li>Area parkir mobil dan motor</li>
+                <li>Toilet umum, Musholla, Kantin</li>
+                <li>Ruang tunggu pengunjung</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JADWAL DOKTER -->
+    <div class="section" id="jadwal">
+        <div class="card">
+
+            <!-- FOTO DOKTER ASLI (4 FOTO) -->
+            <img src="img_dr/dokter cowok1.png" width="23%">
+            <img src="img_dr/dokter cewek.png" width="20.5%">
+            <img src="img_dr/dokter cowo2.png" width="24%">
+            <img src="img_dr/5.jpg" width="19%">
+
+            <h2>Jadwal Dokter</h2>
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>Dokter</th>
+                    <th>Spesialis</th>
+                    <th>Hari</th>
+                    <th>Jam</th>
+                </tr>
+
+                <tr>
+                    <td>Dr. Siti Aminah</td>
+                    <td>Umum</td>
+                    <td>Senin & Jumat</td>
+                    <td>08.00-12.00</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Agus Santoso</td>
+                    <td>Anak</td>
+                    <td>Selasa & Kamis</td>
+                    <td>10.00-14.00</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Intan Lestari Sp.OG</td>
+                    <td>Spesialis Obstetri & Ginekologi</td>
+                    <td>Senin-Sabtu</td>
+                    <td>08.00-14.00</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Fikri Ramadhan, Sp.N</td>
+                    <td>Saraf</td>
+                    <td>Sabtu & Minggu</td>
+                    <td>09.00-15.00</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Siska Nuraini, Sp.KK</td>
+                    <td>Kulit & Kelamin</td>
+                    <td>Kamis-Sabtu</td>
+                    <td>08.00-12.00</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Rio Prakoso, Sp.M</td>
+                    <td>Mata</td>
+                    <td>Kamis</td>
+                    <td>13.00-17.00</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Budi Hartono</td>
+                    <td>Bedah</td>
+                    <td>Rabu & Jumat</td>
+                    <td>13.00-15.00</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. Lina Marlina</td>
+                    <td>THT</td>
+                    <td>Sabtu</td>
+                    <td>13.00-19.00</td>
+                </tr>
+
+            </table>
+
+            <br>
+            <li>Note: Harap diperhatikan bahwa jadwal dokter dapat berubah sewaktu-waktu. silakan cek pembaruan secara
+                berkala.</li>
+
+        </div>
+    </div>
+
+    <!-- PENDAFTARAN -->
+    <div class="section" id="pendaftaran">
+        <div class="card">
+            <h2>Pendaftaran Pasien Online</h2>
+
+            <form action="php100.php" method="POST">
+
+                <label>Nama Lengkap</label>
+                <input type="text" name="nama" required>
+
+                <label>NIK</label>
+                <input type="text" name="nik" required>
+
+                <label>Jenis Kelamin</label>
+                <select name="jk" required>
+                    <option>Laki-laki</option>
+                    <option>Perempuan</option>
+                </select>
+
+                <label>No. Telepon</label>
+                <input type="text" name="telepon" required>
+
+                <label>Alamat Lengkap</label>
+                <textarea name="alamat" required></textarea>
+
+                <label>Pilih Poli</label>
+                <select name="poli" required>
+                    <option>Umum</option>
+                    <option>Anak</option>
+                    <option>Bedah</option>
+                    <option>THT</option>
+                    <option>Mata</option>
+                    <option>Saraf</option>
+                </select>
+
+                <label>Tanggal Kunjungan</label>
+                <input type="date" name="kunjungan" required>
+
+                <label>Keluhan Utama</label>
+                <textarea name="keluhan" required></textarea>
+
+                <button type="submit">Kirim Pendaftaran</button>
+
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        Rumah Sakit Harapan Bunda Pelayanan Kesehatan Terpercaya
+    </footer>
+
+    <script>
+        function showPage(page) {
+            document.querySelectorAll('.section').forEach(s => s.style.display = "none");
+            document.getElementById(page).style.display = "block";
+            document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+            document.getElementById("nav-" + page).classList.add("active");
+        }
+        showPage('home');
+    </script>
+
+</body>
+
+</html>
